@@ -1,0 +1,115 @@
+:root {
+    --text-color: #393f5f;
+    --quote-bg-color: #393f5f;
+    --spiral-color: #132117;
+    --text-color2: #e96d5e;
+}
+
+@keyframes smoothBackgroundChange {
+    0% {
+        background-color: #e96d5e;
+    }
+    20% {
+        background-color: #ff9760;
+    }
+    40% {
+        background-color: #ffe69d;
+    }
+    60% {
+        background-color: #6a7e6a;
+    }
+    80% {
+        background-color: #393f5f;
+    }
+    100% {
+        background-color: #e96d5e;
+    }
+}
+
+body, html {
+    background-color: #393f5f;
+    color: var(--text-color);
+    transition: color 0.5s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body.animate-background {
+    animation: smoothBackgroundChange 60s infinite;
+}
+
+#quote-container {
+    z-index: 10;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    color: var(--text-color2);
+    border-radius: 10px;
+    transition: transform 0.1s, background 0.5s;
+}
+
+#start-button {
+    z-index: 10;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s;
+    visibility: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#start-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#spiral-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#theme-toggle {
+    display: none; /* Hide the theme toggle button */
+}
+
+.hidden {
+    display: none;
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffffba;
+    opacity: 10;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 20; /* Ensure the button is on top */
+
+}
+
+#back-button:hover {
+    background-color: var(--text-color);
+    color: var(--text-color2);
+}

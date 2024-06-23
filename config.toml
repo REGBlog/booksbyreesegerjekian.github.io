@@ -1,0 +1,16 @@
+baseURL = "https://booksbyreesegerjekian.github.io/"
+languageCode = "en-us"
+theme = "kitab"
+title = "Books by Reese Gerjekian"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+pluralizelisttitles = false
+
+[params]
+  author = "Reese Gerjekian"
+  description = "Some books of Reese Gerjekian"
+  dateFormat = "2006-01-02"
+  footer1 = "Happy Reading!"
+  footer2 = "© Reese Gerjekian"
+  customCSS = ["css/kitab.css"]
+

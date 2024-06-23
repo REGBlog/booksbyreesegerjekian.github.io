@@ -7,18 +7,6 @@ body {
   min-width: 250px;
   max-width: 768px;
   font-size: 16px;
-  word-wrap: break-word;
-}
-pre {
-  white-space: pre-wrap; /* Preserve formatting */
-  overflow-wrap: break-word; /* Ensure word wrapping */
-}
-/* Remove background color from code blocks */
-.highlight pre code {
-  background-color: transparent !important; /* Makes the background transparent */
-  color: inherit !important;                /* Inherits the text color from parent */
-  padding: 0 !important;                    /* Removes padding */
-  border: none !important;                  /* Removes border */
 }
 main {
   min-height: calc(100vh - 100px);
